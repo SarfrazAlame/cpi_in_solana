@@ -25,8 +25,9 @@ pub fn process_instruction(
 
     if counter.count == 0 {
         counter.count = 1;
+    } else {
+        counter.count = counter.count * 2;
     }
-    counter.count = counter.count * 2;
 
     counter.serialize(&mut *data_account.data.borrow_mut());
 
